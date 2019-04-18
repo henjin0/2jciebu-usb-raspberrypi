@@ -119,10 +119,10 @@ if __name__ == '__main__':
         try:
             timestamp = datetime.now()
             if (timestamp - last_uploaded).seconds > 5:
-                 am.send({
-                     "d1": e.get_temp(),
-                     "created": timestamp.strftime("%Y/%m/%d %H:%M:%S")
-                 })
+                am.send({
+                    "d1": e.get_co2(),
+                    "created": timestamp.strftime("%Y/%m/%d %H:%M:%S")
+                })
             time.sleep(1)
         except KeyboardInterrupt:
             break
