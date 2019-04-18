@@ -122,11 +122,11 @@ if __name__ == '__main__':
                  am.send({
                      "d1": e.get_co2(),
                      "created": timestamp.strftime("%Y/%m/%d %H:%M:%S")
-                })
-                am.send({
+                 })
+                 am.send({
                      "d2": e.get_temp(),
                      "created": timestamp.strftime("%Y/%m/%d %H:%M:%S")
-                })
+                 })
             time.sleep(1)
         except KeyboardInterrupt:
             break
