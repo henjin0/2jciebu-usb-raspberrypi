@@ -60,7 +60,7 @@ class EnvSensor(threading.Thread):
             センサー値格納用のインスタンス変数を更新します
         """
         self.co2 = int(hex(data[23])+format(data[22], 'x'), 16)
-        self.temp = int(hex(data[9])+format(data[8], 'x'), 16)/100
+        self.temp = int(hex(data[9])+format(data[8], 'x'), 16)
 
     def _calc_crc(self, buf, length):
         """
