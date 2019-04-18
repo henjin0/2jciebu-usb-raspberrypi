@@ -118,7 +118,7 @@ if __name__ == '__main__':
     while True:
         try:
             timestamp = datetime.now()
-            if (timestamp - last_uploaded).seconds > 10:
+            if (timestamp - last_uploaded).seconds > 5:
                  am.send({
                     "d1": e.get_co2(),
                     "created": timestamp.strftime("%Y/%m/%d %H:%M:%S")
